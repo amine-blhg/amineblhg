@@ -1,63 +1,81 @@
+/* إعدادات الألوان الأساسية */
+:root {
+    --primary-color: #00bcd4; /* لون رئيسي (أزرق مائل إلى الفيروزي) */
+    --secondary-color: #ff4081; /* لون ثانوي (وردي مائل إلى الفاتح) */
+    --background-color: #121212; /* خلفية داكنة لتتناسب مع التكنولوجيا */
+    --text-color: #ffffff; /* لون النص الأبيض */
+    --button-hover: #ff80ab; /* تأثير الفأرة على الأزرار */
+}
 
+/* الخلفية العامة */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-    background-color: #f4f4f9;
-    color: #333;
-}
-
-.header {
-    background: #333;
-    color: #fff;
-    padding: 10px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.logo {
-    max-height: 50px;
-}
-
-.navbar ul {
-    list-style: none;
-    display: flex;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
 }
 
-.navbar li {
-    margin-left: 20px;
-}
-
-.navbar a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 18px;
-}
-
-.navbar a:hover {
-    text-decoration: underline;
-}
-
-.section {
+/* ترويسة الموقع */
+header {
+    background-color: var(--primary-color);
     padding: 20px;
-    margin: 20px auto;
-    max-width: 800px;
     text-align: center;
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.footer {
+header h1 {
+    color: var(--text-color);
+    font-size: 3em;
+    margin: 0;
+}
+
+/* تنسيق المقالة */
+#article {
+    padding: 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+#article h2 {
+    color: var(--secondary-color);
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+
+#article p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+/* إضافة تأثير على الأزرار */
+a, button {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    padding: 10px 20px;
+    border: none;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+a:hover, button:hover {
+    background-color: var(--button-hover);
+}
+
+/* تنسيق الفوتر */
+footer {
+    background-color: #333;
+    color: var(--text-color);
     text-align: center;
     padding: 10px;
-    background: #333;
-    color: #fff;
-    position: relative;
-    bottom: 0;
+    position: absolute;
     width: 100%;
+    bottom: 0;
+}
+
+/* تنسيق روابط الموقع */
+a {
+    color: var(--primary-color);
 }
